@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1f242d;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: aqua;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: #1f242d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 30px;
+    font-weight: 600;
+    color: aqua;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a{
+    display: inline-block;
+    text-decoration: none;
+    color: aqua;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.navbar a:hover{
+    color: chartreuse;
+}
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.home-content{
+    max-width: 600px;
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+.home-content h3 span{
+    color: #0ef;
+}
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-content p{
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-img img{
+    max-width: 350px;
+    margin-right: -20px;
+    border-radius: 50%;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: zoomin 1s ease forwards;
+    animation-delay: 2s;
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.social-media a:hover{
+    background: #0ef;
+    color: #1f242d;
+    box-shadow: 0 0 20px #0ef;
+}
+.btn{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #1f242d;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+}
+.about{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10% 0;
+}
+.about-img img{
+    max-width: 350px;
+    margin-left: -20px;
+    border-radius: 50%;
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
+.about-content{
+    max-width: 600px;
+}
+.about-content h1{
+    font-size: 56px;
+    font-weight: 700;
+}
+.about-content h3{
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.about-content p{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.btn2{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #1f242d;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.skill-section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+}
+.skill-section h1{
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.skill-set{
+    margin: 10px 100px 40px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 200px;
+    height: 250px;
+}
+.skill-set h1{
+    margin-top: -15px;
+    font-size: 20px;
+}
+.skill-set a{
+    margin-bottom: 6px;
+    font-size: 50px;
+    color: black;
+}
+.project-section{
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    padding: 40px;
+}
+.project-section h1{
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+.project-set{
+    max-width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    margin: 10px 100px 40px;
+    background: white;
+    color: black;
+}
+.project-set img{
+    width: 175px;
+    height: 150px;
+    margin-bottom: 6px;
+    margin-top: 10px;
+}
+.project-set h1{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.contact-section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+    text-align: center;
+}
+.contact-section h1{
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.input1{
+    width: 400px;
+    padding: 8px;
+    height: 45px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 18px;
+    margin-top: 18px;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.message{
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 18px;
+    margin-top: 18px;
+    padding: 8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.contact-section button{
+    width: 100px;
+    height: 45px;
+    font-size: 20px;
+    border-radius: 10px;
+    outline: none;
+}
+.footer{
+    height: 150px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: blanchedalmond;
+    color: black;
+}
+.social a{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: transparent;
+    font-size: 35px;
+    color: black;
+    text-decoration: none;
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomin{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
